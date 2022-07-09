@@ -1,0 +1,17 @@
+import sys
+
+sys.stdin = open("pails.in", "r")
+sys.stdout = open("pails.out", "w")
+f = list(map(int, list(input().split())))
+x = f[0]
+i = 0
+j = 0
+res = 0
+while (x*i < f[2]):
+  while((x*i)+f[1]*j <= f[2]):
+    
+    res = max(res,(x*i)+f[1]*j )
+    j+=1
+  i += 1
+  j = 0
+print(res)
