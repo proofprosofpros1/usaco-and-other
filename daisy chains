@@ -1,0 +1,10 @@
+n = int(input())
+flowers = list(map(int, list(input().split())))
+f = 0
+for x in range(1, len(flowers)+1):
+  for y in range(len(flowers)-x+1):
+    pic = (flowers[y:x+y])
+    if sum(pic)/len(pic) in pic:
+      f += 1
+print(f)
+
